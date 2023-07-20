@@ -37,35 +37,65 @@
         .pt-2 {
             padding-top: .5rem;
         }
+
+        .invitation-mentions {
+            background-color: rgb(202, 255, 202);
+        }
+
+        .center-middle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
     </style>
 
     </head>
 
     <body>
-        <div class="head">
-            <p class="ww-couple-name ww-title" style="font-size:4.0em">Wonyoung & Somin</p>
+        <div class="head" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 460px;">
+            <p class="ww-couple-name ww-title" style="font-size:2.0em">(Groom's name) & (Bride's name)</p>
             <p class="h2 mt-5 ww-title" style="font-family: 'Gugi', cursive; font-size:1.0em">
             | WE ARE GETTING MARRIED |
             </p>
         </div>
-        <p class="ww-couple-name ww-title" style="font-size:4.0em">신랑이름 & 신부이름</p>
-
-        <h2>(신랑이름)</h2>
-        <img alt="Groom" class="img-fluid" src="https://img.marieclairekorea.com/2019/08/mck_5d5e424910048.jpg" width="500" height="300"/>
-
-        <h2>(신부이름)</h2>
-        <img alt="Bride" class="img-fluid" src="https://mblogthumb-phinf.pstatic.net/MjAxNzEwMjZfMjkz/MDAxNTA5MDA0MTU1OTkz.iVSzhAZH-Y8dtO-n4IzGfrKxUA5lgzXEsj1WIS2keLIg.K_OQf1_Zb96vJ2VuoBVL9P8crIZZDHMRbvXf0_20QpAg.JPEG.sosohanwed/%EC%8B%A0%EB%B6%80%ED%99%94%EC%9E%A5_0.jpg?type=w800" width="500" height="300"/>
 
 
-        <h2>초대합니다</h2>
-<!--        <div class="col text-center mb-5">-->
-        <h6 style="font-family: 'Noto Serif KR', serif;">
-            x<br>
-            (만난지 x년+x일 되는날 결혼 = x일)
-        </h6>
-<!--        </div>-->
+        <div style="text-align:center;">
+            <p class="ww-couple-name ww-title" style="font-size:3.0em">신랑 & 신부</p>
+        </div>
+
+        <div style="display: flex; justify-content: space-around;">
+            <div style="flex: 1; text-align: center;">
+                <h2>(groom's name)</h2>
+                <img alt="Groom" class="img-solo-photo" src="https://cdn.newsculture.press/news/photo/202204/508246_615883_4316.jpg" width="500" height="500"/>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <h2>(Bride's name)</h2>
+                <img alt="Bride" class="img-solo-photo" src="https://image.jtbcplus.kr/data/contents/jam_photo/202208/23/c759fb8b-631d-46c6-a614-75819e82cf58.jpg" width="500" height="500"/>
+            </div>
+        </div>
+        <div class="invitation-mentions">
+
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <img src="https://resources.barunsonmcard.com/upload/invitation/230306/319322/e932ad3f-965f-4796-b7b9-54ad75dbfa34.png" style="width:800px; height:299px;">
+            </div>
+
+            <div class="col text-center mb-5">
+                <h6 style="font-family: 'Noto Serif KR', serif;">
+                    x<br>
+                    (만난지 x년+x일 되는날 결혼 = x일)
+                </h6>
+            </div>
+
+            <div class="invitation-mentions" style="font-family: 'Nanum Myeongjo', serif;color: #333333;font-size: 34px;text-align: center;letter-spacing: 0em;line-height: 2.3em;">
+                (신랑)과 (신부)의 xxx일 끝에 맞잡은 두 손<br>구 즌(궂은) 비바람에도 놓치 않고,<br>다 른 그 무엇보다 소중하고 귀하게<br>은 은한 빛이되어 서로를 환하게 밝히려 합니다.<br><br>바쁘신 가운데 귀한 걸음 하시어<br>저희 결혼식을 축복해주신다면<br>앞으로도 더 없을 기쁨일 것입니다.<br><br>
+            </div>
+        </div>
 
         <h4>웨딩 본식</h4>
+
         <ul>
             <li>
               <span class="pl-2 text-muted">(결혼식장 주소)</span>
@@ -74,8 +104,7 @@
               <span class="pl-2 text-muted">20xx년 xx월 xx일, x:xxPM</span>
             </li>
         </ul>
-        <img alt="Wedding Hall" class="img-fluid" src="https://www.ihall.co.kr/center/pic/banquet_ent_poto/14689960721648090483.jpg"/>
-<!--        class="img-fluid" => CSS 프레임워크에서 제공하는 클래스 중 하나, 너비를 최대 100%로 설정하여, 이미지가 부모 요소의 너비를 초과하지 않도록 하는 반응형 이미지(responsive image)를 만드는 용도-->
+        <img alt="Wedding Hall" src="https://www.ihall.co.kr/center/pic/banquet_ent_poto/14689960721648090483.jpg"/>
 
         <h4>식사</h4>
         <ul>
@@ -115,15 +144,23 @@
         </div>
 
         <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Gift for our wedding</h2>
-        <p>신랑 계좌번호 ~~~ (나중에 토스 등 링크 첨부예정)</p>
-        <p>신부 계좌번호 ~~~ (나중에 토스 등 링크 첨부예정)</p>
+
+        <div class="center-middle">
+            <p>신랑 계좌번호 ~~~ (나중에 토스 등 링크 첨부예정)</p>
+        </div>
+
+        <div class="center-middle">
+            <p>신부 계좌번호 ~~~ (나중에 토스 등 링크 첨부예정)</p>
+        </div>
 
         <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
-        <div>
-            <h5 style="font-family: 'Noto Serif KR', serif;">(식장 주소, 이름)</h5>
-            <h6 style="font-family: 'Noto Serif KR', serif;">(식장 도로명 주소)</h6>
+        <div class="center-middle">
+            <div>
+                <h5 style="font-family: 'Noto Serif KR', serif;">(식장 주소, 이름)</h5>
+                <h6 style="font-family: 'Noto Serif KR', serif;">(식장 도로명 주소)</h6>
+            </div>
         </div>
-        <div class="form-group">
+        <div class="form-group center-middle">
           <div class="col-md-12">
             <div class="my-3 text-center">
               <a href="https://naver.me/FNmlDJ15">
@@ -149,9 +186,11 @@
 
 <!--      Todo  <p>구글 or 카카오 지도 띄우기</p> -->
 
-    <footer>
-        <p>Created by <a href="https://github.com/wish9">위원종</a></p>
-    </footer>
+        <div class="center-middle">
+            <footer>
+                <p>Created by <a href="https://github.com/wish9">위원종</a></p>
+            </footer>
+        </div>
 
     </body>
 </html>
