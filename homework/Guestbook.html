@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>위원종 - 방명록</title>
+
+</head>
+<body>
+<div class="mypic">
+  <h1>위원종 방명록</h1>
+  <p>현재기온: <span id="temp">00.0</span>도</p>
+</div>
+<div class="mypost">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="name" placeholder="url">
+    <label for="floatingInput">닉네임</label>
+  </div>
+  <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comment"
+                      style="height: 100px"></textarea>
+    <label for="floatingTextarea2">응원댓글</label>
+  </div>
+  <button onclick="save_comment()" type="button" class="btn btn-dark">댓글 남기기</button>
+</div>
+</body>
+</html>
