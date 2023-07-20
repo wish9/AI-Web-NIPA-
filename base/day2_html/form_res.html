@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var username = urlParams.get("username")
+        var password = urlParams.get("password")
+
+        window.onload = function() {
+            document.getElementById('username').innerHTML = username;
+            document.getElementById('password').innerHTML = password;
+        }
+
+    </script>
+</head>
+<body>
+    <p>Name: <span id="username"></span></p>
+    <p>Password: <span id="password"></span></p>
+</body>
+</html>

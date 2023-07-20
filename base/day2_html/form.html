@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="form.js"></script>
+</head>
+<body>
+    <form action="form.js", method="post", onsubmit="submitForm(event)">
+        <label> 사용자 : </label> <input type="text" name="username"><br>
+        <label> 비밀번호 : </label> <input type="password" name="password">
+
+        <br>
+        <input type="radio" name="lecture" value="html" checked> 선택항목1 <br>
+        <input type="radio" name="lecture" value="css"> 선택항목2 <br>
+        <input type="radio" name="lecture" value="java"> 선택항목3 <br>
+        <input type="radio" name="lecture" value="cpp"> 선택항목4
+
+        <br>
+        <input type="checkbox" name="lecture" value="html" checked> 선택항목1 <br>
+        <input type="checkbox" name="lecture" value="css"> 선택항목2 <br>
+        <input type="checkbox" name="lecture" value="java"> 선택항목3 <br>
+        <input type="checkbox" name="lecture" value="cpp" disabled> 안눌리게 막아둔 선택항목
+
+        <br>
+        <select name="fruit">
+            <option value="apple"> 목록1
+            <option value="orange" selected> 기본 선택되는 목록2
+            <option value="strawberry"> 목록3
+            <option value="peach"> 목록4
+        </select>
+
+        <br>
+        <textarea name="message" rows="5" cols="30">
+텍스트 박스 내용은 여기에 적는다.
+        </textarea>
+
+        <br>
+        <button type="button" onclick="alert('버튼 누르면 알람 뜨게 하는거')">
+            버튼
+        </button>
+
+        <br>
+        <input type="submit" value="전송">
+    </form>
+</body>
+</html>

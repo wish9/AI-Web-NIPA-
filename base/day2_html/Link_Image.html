@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        a:link    { color: teal; }
+        a:visited { color: maroon; text-decoration: none }
+        a:hover   { color: yellow; text-decoration: none }
+        a:active  { color: red; text-decoration: none }
+    </style>
+</head>
+<body>
+<!--    <a></a> 태그는 클릭할 수 있게 바꿔주는 태그!    -->
+
+    <a href="https://velog.io/@wish17/HTML-2-AI-%EC%9B%B9%EA%B0%9C%EB%B0%9C-%EC%B7%A8%EC%97%85%EC%BA%A0%ED%94%84-%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EC%82%B0%EC%97%85%EC%A7%84%ED%9D%A5%EC%9B%90NIPA">
+        <h2>주소 링크 첨부</h2>
+    </a>
+
+<!--    파일 링크는 상대경로로 작성하자~-->
+    <h2><a href="Html.html" target="_blank">day2_Html 파일 열기</a></h2>
+    <h2><a href="../text/intro.html" target="_self">intro 파일 열기</a></h2>
+    <h2><a href="../intro.html" target="_parent">parent</a></h2>
+    <h2><a href="../intro.html" target="_top">top</a></h2>
+    <h2><a href="../intro.html" target="myframe">myframe</a></h2>
+
+    <iframe name="myframe" style="width:50%; height: 330px"></iframe>
+
+    <p></p>
+
+<!--    이미지도 링크와 마찬가지로 상대경로, 절대경로로 첨부 가능-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" alt="html5 이미지">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" alt="html size" width="320" height="214">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" alt="style size" style="width:320px; height:214px">
+
+<!--        이미지에 링크 거는 것도 가능!-->
+    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/120456261?v=4" alt="flag" style="width:320px; height:214px">
+    </a>
+
+</body>
+</html>
