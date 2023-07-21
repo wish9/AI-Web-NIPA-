@@ -49,7 +49,40 @@
             justify-content: center;
         }
 
+        .none-ul {
+          list-style-type: none;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 960px;
+            text-align: center; // to center the text
+        }
+
+        .photo-card {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .photo-card p {
+            text-align: center;
+        }
+
+
     </style>
+
 
     </head>
 
@@ -93,55 +126,50 @@
                 (신랑)과 (신부)의 xxx일 끝에 맞잡은 두 손<br>구 즌(궂은) 비바람에도 놓치 않고,<br>다 른 그 무엇보다 소중하고 귀하게<br>은 은한 빛이되어 서로를 환하게 밝히려 합니다.<br><br>바쁘신 가운데 귀한 걸음 하시어<br>저희 결혼식을 축복해주신다면<br>앞으로도 더 없을 기쁨일 것입니다.<br><br>
             </div>
         </div>
+        <div class="text-center">
+            <h4>웨딩 본식</h4>
 
-        <h4>웨딩 본식</h4>
+            <ul class="none-ul">
+                <li>
+                  <span class="pl-2 text-muted">(결혼식장 주소)</span>
+                </li>
+                <li class="pt-2">
+                  <span class="pl-2 text-muted">20xx년 xx월 xx일, x:xxPM</span>
+                </li>
+            </ul>
+            <img alt="Wedding Hall" src="https://www.ihall.co.kr/center/pic/banquet_ent_poto/14689960721648090483.jpg"/>
 
-        <ul>
-            <li>
-              <span class="pl-2 text-muted">(결혼식장 주소)</span>
-            </li>
-            <li class="pt-2">
-              <span class="pl-2 text-muted">20xx년 xx월 xx일, x:xxPM</span>
-            </li>
-        </ul>
-        <img alt="Wedding Hall" src="https://www.ihall.co.kr/center/pic/banquet_ent_poto/14689960721648090483.jpg"/>
-
-        <h4>식사</h4>
-        <ul>
-            <li>
-              <span class="pl-2 text-muted">(결혼식장 식당 주소 [층수])</span>
-            </li>
-            <li class="pt-2">
-              <span class="pl-2 text-muted">(식사가능 시간대)20xx년 xx월 xx일, x:xxPM ~ x:xxPM</span>
-            </li>
-        </ul>
-        <img alt="Restaurant" class="img-fluid" src="https://www.iwedding.co.kr/center/website/ihall_img/1468996072/1468996072_img_4538_0_1534476162.jpg"/>
-
-        <footer>
-          <p>Created by <a href="https://github.com/wish9">위원종</a></p>
-        </footer>
-
-        <h2>포토 갤러리</h2>
-        <div class="photo-gallery">
-
-            <div class="card-columns">
-              <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">
-                <a data-gallery="ww-gallery" data-toggle="lightbox">
-                  <img alt="Gallery Pic 2" class="img-fluid" src="https://t1.daumcdn.net/cfile/tistory/99AED0335B7A1A2D13"/>
-                </a>
-              </div>
-            </div>
-            <!--                위에꺼(class = card) 복붙해서 사진 여러장 추가하면 됨-->
-
-            <div class="card-columns">
-              <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">
-                <a data-gallery="ww-gallery" data-toggle="lightbox">
-                  <img alt="Gallery Pic 2" class="img-fluid" src="https://static.cdn.soomgo.com/upload/service/294f02e9-d204-42ce-a8ba-b00e4006f424.jpg?webp=1"/>
-                </a>
-              </div>
-            </div>
+            <h4>식사</h4>
+            <ul class="none-ul">
+                <li>
+                  <span class="pl-2 text-muted">(결혼식장 식당 주소 [층수])</span>
+                </li>
+                <li class="pt-2">
+                  <span class="pl-2 text-muted">(식사가능 시간대)20xx년 xx월 xx일, x:xxPM ~ x:xxPM</span>
+                </li>
+            </ul>
+            <img alt="Restaurant" class="img-fluid" src="https://www.iwedding.co.kr/center/website/ihall_img/1468996072/1468996072_img_4538_0_1534476162.jpg"/>
 
         </div>
+        <div class="text-center">
+            <h2>포토 갤러리</h2>
+        </div>
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="https://wehotel.co.kr/wp-content/uploads/sites/35/2023/03/2-2-scaled.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="photo-card">
+                <img src="https://www.fsnews.co.kr/news/photo/201804/28011_23720_645.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="photo-card">
+                <img src="https://cdn.imweb.me/thumbnail/20211202/4cbae656eb3c0.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="photo-card">
+                <img src="https://www.ifamily.co.kr/image/icard/18/600539ea7b50b_3232256098.jpg" alt="Gallery Image 4">
+            </div>
+        </div>
+
+
 
         <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Gift for our wedding</h2>
 
