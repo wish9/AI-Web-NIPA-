@@ -34,33 +34,64 @@ function printBoard() {
 
  cf. 4중 반복문 오반데... 나중에 수정...
 */
-function checkWin() {
-  const directions = [[0, 1], [1, 0], [1, 1], [-1, 1]];
+function checkWin(x, y) {
+    const directions = [[0, 1], [1, 0], [1, 1], [-1, 1]];
 
-  for(let i = 0; i < 30; i++) {
-    for(let j = 0; j < 30; j++) {
-      if(arr[i][j] !== '') {
-        for(let direction of directions) {
-          if(checkLine(i, j, direction)) {
-            return true;
-          }
-        }
+    for(let direction of directions) {
+      if(checkLine(x, y, direction)) {
+        return true;
       }
     }
-  }
   return false;
 }
 
 
 // 한 방향(라인)에 대해 오목이 완성되었는지 확인하는 메서드
 function checkLine(x, y, direction) {
-    let i = x, j = y, count = 0;
-    while(i >= 0 && i < 30 && j >= 0 && j < 30 && arr[i][j] === arr[x][y]) {
-        count++;
-        i += direction[0];
-        j += direction[1];
+    let i = x, j = y, count = 0, xyColor = arr[x][y], used = 0;
+
+    for (let k = 0; k < 5; k++) {
+        if (arr[i][j] === xyColor){
+            count++;
+            i += direction[0];
+            j += direction[1];
+        }else {
+            used = k;
+            break;
+        }
+        if (overRange(i, j)) {
+            used = k;
+            break;
+        }
     }
+
+    i = x - direction[0], j = y - direction[1]
+    if (overRange(i,j)) {
+        return count == 5;
+    }
+
+    for (let k = 0; k < 5 - used; k++) {
+        if (arr[i][j] === xyColor){
+            count++;
+            i -= direction[0];
+            j -= direction[1];
+        }else {
+            break;
+        }
+        if (overRange(i, j)) {
+            break;
+        }
+    }
+
+
     return count === 5;
+}
+
+function overRange(x, y) {
+    if (x < 0 || x >= 30 || y < 0 || y >= 30) {
+        return true;
+    }
+    return false;
 }
 
 
@@ -98,7 +129,7 @@ function play() {
         arr[x][y] = player;
         printBoard();
 
-        if(checkWin()) {
+        if(checkWin(x, y)) {
             console.log('Game over')
             console.log(`${player === '흑' ? '흑' : '백'}색돌이 승리하였습니다!!`);
             rl.close();
