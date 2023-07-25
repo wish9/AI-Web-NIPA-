@@ -5,6 +5,12 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+// 5분 지나면 입력 종료되는 기능
+setTimeout(function() {
+    console.log('5분이 지났습니다. 게임이 종료됩니다.');
+    rl.close();
+}, 5 * 60 * 1000);
+
 console.log('행, 열 <- 왼쪽과 같은 양식으로 좌표값을 입력해주세요.')
 console.log('ex) 1,1 or 1, 1 or 7, 3 or 7,3 등')
 
@@ -94,8 +100,9 @@ function play() {
 
         if(checkWin()) {
             console.log('Game over')
-            console.log(`${player === 'b' ? '흑' : '백'}색돌이 승리하였습니다!! `);
+            console.log(`${player === 'b' ? '흑' : '백'}색돌이 승리하였습니다!!`);
             rl.close();
+            clearTimeout(timeout);
         } else {
             turn++;
             play();
