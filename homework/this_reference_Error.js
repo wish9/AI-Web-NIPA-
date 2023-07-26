@@ -27,3 +27,5 @@ var person = {
 
 console.log(person)
 console.log(person.fullId())
+
+// 커밋메세지 잘못올려서 다시 올립니다.
