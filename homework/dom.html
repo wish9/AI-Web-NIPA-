@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='UTF-8'>
+    <title>JavaScript DOM Element</title>
+    <script>
+        //HTML 태그 이름을 이용한 선택
+        console.log('aaa')
+        var selectedItem = document.getElementsByTagName('li');     // 모든 <li> 요소를 선택함.
+        console.log(selectedItem) // 얘는 로그 찍히는 것 처럼 보인다.
+        console.log(selectedItem.length) // 얘는 안찍힌다.
+        for (var i = 0; i < selectedItem.length; i++) { // 실제로 selectedItem.length를 받아오지 못해서 색도 안바뀐다.
+            selectedItem.item(i).style.color = 'red';
+            console.log(selectedItem.item(i));
+        }
+    </script>
+</head>
+<body>
+    <h1>HTML 태그 이름을 이용한 선택</h1>
+    <ul>
+        <li>첫 번째 아이템이에요!</li>
+        <li>두 번째 아이템이에요!</li>
+        <li>세 번째 아이템이에요!</li>
+        <li>네 번째 아이템이에요!</li>
+        <li>다섯 번째 아이템이에요!</li>
+    </ul>
+    <script>
+        // 원래 여기에 적는게 맞다.
+    </script>
+</body>
+</html>
